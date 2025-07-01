@@ -222,7 +222,7 @@ WHERE e.ExpertID IN (
 GROUP BY e.ExpertID, e.FullName
 ORDER BY e.FullName;
 
--- 58. (Same as 54) Count experts per skill with level >= 4 and >2 experts.
+-- 58. Count experts per skill with level >= 4 and >2 experts.
 SELECT s.SkillName, COUNT(DISTINCT es.ExpertID) AS NumExperts
 FROM ExpertSkills es
 JOIN Skills s ON es.SkillID = s.SkillID
